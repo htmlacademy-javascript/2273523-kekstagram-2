@@ -41,28 +41,23 @@ function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const getRandomElement = (elements) => {
-  return elements[getRandomNumber(0, elements.length - 1)];
-};
+const getRandomElement = (elements) => elements[getRandomNumber(0, elements.length - 1)];
 
-const getRandomInteger = () => {
-  return Math.floor(Math.random() * 100);
-};
+const getRandomInteger = () => Math.floor(Math.random() * 100);
 
-const createDescription = () => {
-  return {
-    id: getRandom(1, 25),
-    url: 'photos/' + getRandom(1, 25) + '.jpg',
-    description: getRandomElement(DESCRIPTIONS),
-    likes: getRandom(15, 200),
-    comments: {
-      id: getRandomInteger(),
-      avatar: 'img/avatar-' +  getRandom(1, 6) + '.svg',
-      message: getRandomElement(MESSAGES),
-      name: getRandomElement(NAMES),
-    }
-  };
-};
+const createDescription = () => ({
+  id: getRandom(1, 25),
+  url: `photos/${ getRandom(1, 25) }.jpg`,
+  description: getRandomElement(DESCRIPTIONS),
+  likes: getRandom(15, 200),
+  comments: {
+    id: getRandomInteger(),
+    avatar: `img/avatar-${ getRandom(1, 6) }.svg`,
+    message: getRandomElement(MESSAGES),
+    name: getRandomElement(NAMES),
+  }
+});
 
 const typicalDescriptions = Array.from({length: 25}, createDescription);
+/* eslint-disable no-console */
 console.log(typicalDescriptions);
