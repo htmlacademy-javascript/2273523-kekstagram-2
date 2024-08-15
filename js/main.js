@@ -46,10 +46,6 @@ const getRandomElement = (elements) => {
 };
 
 const getRandomInteger = () => {
-  let arry = [];
-  for (let i = 0; i < arry.length; i++) {
-    arry.push(i);
-  };
   return Math.floor(Math.random() * 100);
 };
 
