@@ -28,7 +28,7 @@ const DESCRIPTIONS = [
   'рисунок'
 ];
 
-const getRandomNum = (a, b) => {
+const getRandomN = (a, b) => {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
   const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
   const result = Math.random() * (upper - lower + 1) + lower;
@@ -41,7 +41,7 @@ function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const getRandomElement = (elements) => elements[getRandomNum(0, elements.length - 1)];
+const getRandomElement = (elements) => elements[getRandomN(0, elements.length - 1)];
 
 const getRandomInteger = () => Math.floor(Math.random() * 100);
 
