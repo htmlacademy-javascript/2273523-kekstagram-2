@@ -45,7 +45,7 @@ const getRandomElement = (elements) => {
   return elements[getRandomNumber(0, elements.length - 1)];
 };
 
-const getRandomInteger = () => {
+const getRandomInt = () => {
   return Math.floor(Math.random() * 100);
 };
 
@@ -56,7 +56,7 @@ const createDescription = () => {
     description: getRandomElement(DESCRIPTIONS),
     likes: getRandom(15, 200),
     comments: {
-      id: getRandomInteger(),
+      id: getRandomInt(),
       avatar: 'img/avatar-' +  getRandom(1, 6) + '.svg',
       message: getRandomElement(MESSAGES),
       name: getRandomElement(NAMES),
