@@ -1,3 +1,3 @@
-import './data';
-import './number-generate';
-import './description';
+import './names';
+import './generate';
+import './picture-description';
