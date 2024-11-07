@@ -1,0 +1,6 @@
+import './main.js'
+import './names.js'
+import './random-number-generator.js'
+import './description-creator.js'
+import './popup-open.js'
+import './popup-close.js'
